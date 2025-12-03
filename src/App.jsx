@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/">
+      <BrowserRouter basename="/stepper-form">
         <Routes>
           {/* Stepper Form */}
           <Route path="/" element={<Stepper_Form_wrapper />} />
