@@ -36,11 +36,11 @@ function Stepper_Form_wrapper() {
 
   return (
     <>
-      <div className="container mt-5 text-center">
-        <h1> Stepper_Form_wrapper </h1>
+      <div className="container w-25 mt-5 text-center">
+        <h1> Stepper_Form </h1>
 
-        <div className="steps-container mt-3 mb-3 row">
-          <div className="col first-step">
+        <div className="d-flex flex-column steps-container mt-3 mb-3 ">
+          <div className="m-3 first-step">
             <h5>
               {steps.step_1.complete ? (
                 <i
@@ -61,12 +61,12 @@ function Stepper_Form_wrapper() {
                 style={{ width: "100%" }}
                 aria-valuenow="100"
                 aria-valuemin="0"
-                aria-valuemax="100"
+                valuemax="100"
               ></div>
             </div>
           </div>
 
-          <div className="col second-step ">
+          <div className="m-3 second-step ">
             <h5>
               {steps.step_2.complete ? (
                 <i
@@ -87,12 +87,12 @@ function Stepper_Form_wrapper() {
                 style={{ width: "100%" }}
                 aria-valuenow="100"
                 aria-valuemin="0"
-                aria-valuemax="100"
+                valuemax="100"
               ></div>
             </div>
           </div>
 
-          <div className="col third-step">
+          <div className="m-3 third-step">
             <h5>
               {steps.step_3.complete ? (
                 <i

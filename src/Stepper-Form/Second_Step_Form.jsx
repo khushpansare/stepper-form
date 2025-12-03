@@ -34,6 +34,9 @@ function Second_Step_Form({ setFormData, formData, setSteps, steps }) {
         }) => (
           <form onSubmit={handleSubmit}>
             <input
+              className={`form-control ${
+                errors.p_price && touched.p_price ? "border-danger" : ""
+              }`}
               type="p_price"
               name="p_price"
               onChange={(e) => {
@@ -49,6 +52,9 @@ function Second_Step_Form({ setFormData, formData, setSteps, steps }) {
             <br />
 
             <input
+              className={`form-control ${
+                errors.p_discount && touched.p_discount ? "border-danger" : ""
+              }`}
               type="p_discount"
               name="p_discount"
               onChange={(e) => {
@@ -62,7 +68,9 @@ function Second_Step_Form({ setFormData, formData, setSteps, steps }) {
             <br />
             <br />
 
-            <button type="submit">Next</button>
+            <button type="submit" className="btn btn-primary">
+              Next
+            </button>
           </form>
         )}
       </Formik>

@@ -41,6 +41,9 @@ function First_Step_Form({ setFormData, formData, setSteps, steps }) {
         }) => (
           <form onSubmit={handleSubmit}>
             <input
+              className={`form-control ${
+                errors.p_name && touched.p_name ? "border-danger" : ""
+              }`}
               type="p_name"
               name="p_name"
               onChange={(e) => {
@@ -56,6 +59,9 @@ function First_Step_Form({ setFormData, formData, setSteps, steps }) {
             <br />
 
             <input
+              className={`form-control ${
+                errors.p_company && touched.p_company ? "border-danger" : ""
+              }`}
               type="p_company"
               name="p_company"
               onChange={(e) => {
@@ -70,6 +76,9 @@ function First_Step_Form({ setFormData, formData, setSteps, steps }) {
             <br />
 
             <input
+              className={`form-control ${
+                errors.p_desc && touched.p_desc ? "border-danger" : ""
+              }`}
               type="p_desc"
               name="p_desc"
               onChange={(e) => {

@@ -36,6 +36,9 @@ function Third_Step_Form({ setFormData, formData, setSteps, steps }) {
         }) => (
           <form onSubmit={handleSubmit}>
             <input
+              className={`form-control ${
+                errors.rating && touched.rating ? "border-danger" : ""
+              }`}
               type="rating"
               name="rating"
               onChange={(e) => {
@@ -51,6 +54,9 @@ function Third_Step_Form({ setFormData, formData, setSteps, steps }) {
             <br />
 
             <input
+              className={`form-control ${
+                errors.comment && touched.comment ? "border-danger" : ""
+              }`}
               type="comment"
               name="comment"
               onChange={(e) => {
@@ -64,7 +70,11 @@ function Third_Step_Form({ setFormData, formData, setSteps, steps }) {
             <br />
             <br />
 
-            <button type="submit" disabled={isSubmitting}>
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={isSubmitting}
+            >
               Submit
             </button>
           </form>
